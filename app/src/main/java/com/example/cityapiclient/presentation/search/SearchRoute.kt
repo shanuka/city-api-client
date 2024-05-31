@@ -19,7 +19,6 @@ import androidx.compose.ui.focus.FocusManager
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.cityapiclient.domain.models.City
 import com.example.cityapiclient.domain.models.CityResults
@@ -31,7 +30,6 @@ import com.example.cityapiclient.presentation.layouts.DoubleLayoutWithScaffold
 import com.example.cityapiclient.presentation.theme.orangeYellowGradient
 
 
-@OptIn(ExperimentalLifecycleComposeApi::class)
 @Composable
 fun SearchRoute(
     modifier: Modifier = Modifier,

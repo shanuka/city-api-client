@@ -79,9 +79,10 @@ class AppNavigationActions(private val navController: NavHostController) {
     fun navigateTo(destination: TopLevelDestination) {
         navController.navigate(destination.route) {
             var entries: String = ""
-            navController.backQueue.forEach() {
-                entries += "${it.destination.route};"
-            }
+//            navController.backQueue.forEach() {
+//                entries += "${it.destination.route};"
+//            }
+//            navController.currentBackStack
             Log.d("debug", "navBackStack: $entries")
             popUpTo(navController.graph.findStartDestination().id) {
                 saveState = true

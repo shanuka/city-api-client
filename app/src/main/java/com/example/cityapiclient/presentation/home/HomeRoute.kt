@@ -9,7 +9,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.painterResource
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.cityapiclient.R
 import com.example.cityapiclient.data.local.CurrentUser
@@ -21,7 +20,6 @@ import com.example.cityapiclient.presentation.layouts.DoubleLayoutWithScaffold
 import com.example.cityapiclient.util.windowinfo.AppLayoutInfo
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalLifecycleComposeApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun HomeRoute(
     modifier: Modifier = Modifier,

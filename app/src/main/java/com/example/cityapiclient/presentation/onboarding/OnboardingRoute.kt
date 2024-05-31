@@ -8,14 +8,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.unit.IntOffset
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.cityapiclient.util.windowinfo.AppLayoutInfo
 import com.example.cityapiclient.presentation.layouts.CompactLayoutScrollable
 import com.example.cityapiclient.presentation.layouts.DoubleScreenLayout
 import com.example.cityapiclient.util.windowinfo.AppLayoutMode
 
-@OptIn(ExperimentalAnimationApi::class, ExperimentalLifecycleComposeApi::class)
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun OnboardingRoute(
     appLayoutInfo: AppLayoutInfo,
@@ -63,18 +62,18 @@ fun OnboardingRoute(
                 targetState = uiState.currentScreen,
                 transitionSpec = {
                     val animationSpec: TweenSpec<IntOffset> = tween(300)
-                    val direction = AnimatedContentScope.SlideDirection.Left
+                    val direction =  AnimatedContentTransitionScope.SlideDirection.Left
 
                     if (targetState == 0) {
                         scaleIn()
                     } else {
                         slideIntoContainer(
-                            towards = AnimatedContentScope.SlideDirection.Left,
+                            towards = AnimatedContentTransitionScope.SlideDirection.Left,
                             animationSpec = animationSpec
                         )
                     } with
                             slideOutOfContainer(
-                                towards = AnimatedContentScope.SlideDirection.Left,
+                                towards =  AnimatedContentTransitionScope.SlideDirection.Left,
                                 animationSpec = animationSpec
                             )
                 }

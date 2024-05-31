@@ -7,7 +7,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
 import androidx.compose.runtime.getValue
-import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.cityapiclient.data.local.UserRepository
 import com.example.cityapiclient.data.remote.models.UserApiModel
@@ -37,11 +36,11 @@ class MainActivity : ComponentActivity() {
     @Inject
     lateinit var signInObserver: SignInObserver
 
-    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class, ExperimentalLifecycleComposeApi::class)
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        appendLog(this, "Starting app...")
+       // appendLog(this, "Starting app...")
 
         lifecycle.addObserver(signInObserver)
         if (Build.VERSION.SDK_INT >= 33) {

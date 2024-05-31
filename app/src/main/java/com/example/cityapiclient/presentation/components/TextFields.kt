@@ -97,13 +97,11 @@ fun TrailingIcon(
 @OptIn(ExperimentalMaterial3Api::class)
 fun textFieldColors() = TextFieldDefaults.textFieldColors(
     containerColor = MaterialTheme.colorScheme.surface,
-    placeholderColor = MaterialTheme.colorScheme.outline,
     unfocusedLeadingIconColor = MaterialTheme.colorScheme.outline,
     unfocusedIndicatorColor = MaterialTheme.colorScheme.outline,
     focusedIndicatorColor = MaterialTheme.colorScheme.outline,
     cursorColor = MaterialTheme.colorScheme.onPrimary,
     focusedLeadingIconColor = MaterialTheme.colorScheme.onPrimary,
-    textColor = MaterialTheme.colorScheme.onPrimary,
     focusedLabelColor = MaterialTheme.colorScheme.outline,
     unfocusedLabelColor = MaterialTheme.colorScheme.outline,
     disabledSupportingTextColor = MaterialTheme.colorScheme.onSecondary.copy(.5f),

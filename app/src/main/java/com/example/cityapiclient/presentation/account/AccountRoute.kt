@@ -12,7 +12,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.cityapiclient.R
 import com.example.cityapiclient.data.local.CurrentUser
@@ -26,7 +25,6 @@ import com.example.cityapiclient.util.windowinfo.AppLayoutInfo
 import com.example.cityapiclient.util.windowinfo.AppLayoutMode
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalLifecycleComposeApi::class)
 @Composable
 fun AccountRoute(
     viewModel: AccountViewModel = hiltViewModel(),

@@ -11,19 +11,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
-import androidx.lifecycle.compose.ExperimentalLifecycleComposeApi
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.example.cityapiclient.data.local.OnboardingScreenRepo
-import com.example.cityapiclient.data.local.UserRepository
-import com.example.cityapiclient.data.remote.models.UserApiModel
-import com.example.cityapiclient.data.remote.models.UserApiResponse
-import com.example.cityapiclient.domain.SignInObserver
-import com.example.cityapiclient.domain.SignInState
-import com.example.cityapiclient.presentation.AppRoot
-import com.example.cityapiclient.util.windowinfo.AppLayoutInfo
-import com.example.cityapiclient.util.windowinfo.getFoldableInfoFlow
-import com.example.cityapiclient.util.windowinfo.getWindowLayoutType
-import com.example.cityapiclient.util.windowinfo.getWindowSizeClasses
 import dagger.hilt.android.AndroidEntryPoint
 import io.ktor.client.*
 import kotlinx.serialization.decodeFromString
@@ -39,7 +26,6 @@ class MainActivity2 : ComponentActivity() {
     @Inject
     lateinit var dataStore: DataStore<Preferences>
 
-    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class, ExperimentalLifecycleComposeApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
